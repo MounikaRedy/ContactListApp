@@ -6,4 +6,8 @@ function AppCtrl($scope, $http) {
 		$scope.contactlist = response;
 	});
 
+$scope.addcontact = function() {
+	console.log($scope.contact);
+};
+
 }
