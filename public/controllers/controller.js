@@ -6,7 +6,7 @@ function AppCtrl($scope, $http) {
 		$scope.contactlist = response;
 	});
 
-$scope.addcontact = function() {
+$scope.addContact = function() {
 	console.log($scope.contact);
 	$http.post('/contactlist', $scope.contact);
 };

@@ -2,8 +2,10 @@ var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
 var db = mongojs('contactlist', ['contactlist']);
+var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.json());
 
 app.get('/contactlist', function(req, res) {
 	console.log("I received a GET request")
@@ -15,8 +17,8 @@ db.contactlist.find(function (err, docs) {
 });
 
 app.post('/contactlist', function(req, res) {
-	consle.log(req.body);
-})
+	console.log(req.body);
+});
 
 app.listen(3000);
 console.log("Server Running on port 3000");
