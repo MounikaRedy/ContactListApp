@@ -34,4 +34,7 @@ $scope.edit = function(id) {
 	});
 };
 
+$scope.update = function() {
+	console.log($scope.contact._id);
+};
 }
