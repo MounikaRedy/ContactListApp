@@ -23,5 +23,10 @@ app.post('/contactlist', function(req, res) {
 	})
 });
 
+app.delete('/contactlist/:id', function(req, res) {
+	var id = req.params.id;
+	console.log(id);
+});
+
 app.listen(3000);
 console.log("Server Running on port 3000");
