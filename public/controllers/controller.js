@@ -20,4 +20,8 @@ $scope.addContact = function() {
 	});
 };
 
+$scope.remove = function(id) {
+	console.log(id);
+};
+
 }
