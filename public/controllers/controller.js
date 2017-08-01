@@ -40,4 +40,8 @@ $scope.update = function() {
 		refresh();
 	});
 };
+
+$scope.deselect = function() {
+	$scope.contact = "";
+}
 }
